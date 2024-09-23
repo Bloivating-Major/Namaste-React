@@ -36,7 +36,7 @@
 --> React gives you ability to manipulate the DOM structure
   * Earlier we created h1 using react and we had an object within that.
     So what does that object do is it contains attributes.
-  * React element is Object a norma javascript Object. 
+  * React element is Object a normal javascript Object.
     IF you console.log(heading2); you will see it returns an OBJ
     Also it has props: within it there are children + attributes.
 
