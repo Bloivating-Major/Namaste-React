@@ -1,0 +1,54 @@
+*{
+    font-family: gilroy;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 0px 50px;
+
+}
+
+.logo{
+    width: 200px;
+}
+
+.nav-items ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-items > ul > li{
+    padding: 10px;
+    margin: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.restaurant-card{
+  width: 250px;
+  border-radius: 20px;
+  background-color: bisque;
+  margin: 10px;
+  padding: 20px;
+  overflow: hidden;
+}
+ 
+.cardImage{
+    width: 250px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.Search{
+    margin-bottom: 20px;
+    padding: 10px;
+
+}
+
+.restaurant-container{
+    display: flex;
+    flex-wrap: wrap;
+}
