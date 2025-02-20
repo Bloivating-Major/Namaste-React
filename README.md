@@ -13,6 +13,7 @@ This repository contains my notes, code snippets, and learnings from each episod
 📌 **[Episode 04 - Talk is Cheap, Show me the Code](./Episode%2004%20Show%20me%20the%20Code/readme.md)** – Working with Functional Components 🖥️  
 📌 **[Episode 05 - Let’s Get Hooked!](./Episode%2005%20Let's%20Get%20Hooked/Theory/Episode%2005%20-%20Theory.md)** – React Hooks & useState 🔗  
 📌 **[Episode 06 - Exploring the World](./Episode%2006%20Exploring%20the%20World/Readme.md)** – React useEffect & Reconciliation 🔗  
+📌 **[Episode 07 - Finding The Path](./Episode%2007%20Finding%20The%20Path/Readme.md)** – Routing in React Diving Deep into uesEffect and useState hooks. 🖥️  
 
 🔜 More episodes coming soon... 🚀  
 
