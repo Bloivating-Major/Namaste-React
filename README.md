@@ -23,6 +23,8 @@ This repository contains my notes, code snippets, and learnings from each episod
 
 📌 **[Episode 08 - Let's Get Classy](./Episode%2008%20Let's%20Get%20Classy/Readme.md)** – Class-Based Components in React 🌍
 
+📌 **[Episode 09 - Optimizing our App](./Episode%2009%20Optimizing%20our%20App/Readme.md)** – Custom Hook and Code Optimization 🌍
+
 🔜 More episodes coming soon... 🚀  
 
 ---
