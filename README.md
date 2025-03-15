@@ -25,6 +25,8 @@ This repository contains my notes, code snippets, and learnings from each episod
 
 📌 **[Episode 09 - Optimizing our App](./Episode%2009%20Optimizing%20our%20App/Readme.md)** – Custom Hook and Code Optimization 🌍
 
+📌 **[Episode 10: Jo Dikhta Hai, Vo Bikta Hai! 🎨](./Episode%2010%20Jo%20Dikhta%20hai%20vo%20Bikta%20Hai/Readme.md)** – Tailwind CSS and Ui Library and Frameworks 🌟
+
 🔜 More episodes coming soon... 🚀  
 
 ---
