@@ -27,6 +27,8 @@ This repository contains my notes, code snippets, and learnings from each episod
 
 📌 **[Episode 10: Jo Dikhta Hai, Vo Bikta Hai! 🎨](./Episode%2010%20Jo%20Dikhta%20hai%20vo%20Bikta%20Hai/Readme.md)** – Tailwind CSS and Ui Library and Frameworks 🌟
 
+📌 **[Episode 11: Data is the New Oil 💧](./Episode%2011%20Data%20is%20the%20New%20Oil/Readme.md)** – We explored the separation of a React application into UI and data layers, controlled and uncontrolled components, prop drilling, and the Context API
+
 🔜 More episodes coming soon... 🚀  
 
 ---
