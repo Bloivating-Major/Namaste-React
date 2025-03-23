@@ -1,0 +1,25 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx parcel index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.6.1",
+    "@tailwindcss/postcss": "^4.0.15",
+    "parcel": "^2.13.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^6.11.2",
+    "tailwindcss": "^4.0.15"
+  },
+  "description": "",
+  "devDependencies": {
+    "process": "^0.11.10"
+  }
+}
