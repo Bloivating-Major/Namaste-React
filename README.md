@@ -25,9 +25,11 @@ This repository contains my notes, code snippets, and learnings from each episod
 
 📌 **[Episode 09 - Optimizing our App](./Episode%2009%20Optimizing%20our%20App/Readme.md)** – Custom Hook and Code Optimization 🌍
 
-📌 **[Episode 10: Jo Dikhta Hai, Vo Bikta Hai! 🎨](./Episode%2010%20Jo%20Dikhta%20hai%20vo%20Bikta%20Hai/Readme.md)** – Tailwind CSS and Ui Library and Frameworks 🌟
+📌 **[Episode 10 - Jo Dikhta Hai, Vo Bikta Hai! 🎨](./Episode%2010%20Jo%20Dikhta%20hai%20vo%20Bikta%20Hai/Readme.md)** – Tailwind CSS and Ui Library and Frameworks 🌟
 
-📌 **[Episode 11: Data is the New Oil 💧](./Episode%2011%20Data%20is%20the%20New%20Oil/Readme.md)** – We explored the separation of a React application into UI and data layers, controlled and uncontrolled components, prop drilling, and the Context API
+📌 **[Episode 11 - Data is the New Oil 💧](./Episode%2011%20Data%20is%20the%20New%20Oil/Readme.md)** – We explored the separation of a React application into UI and data layers, controlled and uncontrolled components, prop drilling, and the Context API
+
+📌 **[Episode 12 - Let's Build Our Store 🏬](./Episode%2012%20Let's%20Build%20Our%20Store/Readme.md)** – We explored state management using Redux, including its setup, slices, actions, and selectors. Let’s dive into the key concepts and learnings! 🚀
 
 🔜 More episodes coming soon... 🚀  
 
