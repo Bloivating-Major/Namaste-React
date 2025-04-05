@@ -31,7 +31,9 @@ This repository contains my notes, code snippets, and learnings from each episod
 
 📌 **[Episode 12 - Let's Build Our Store 🏬](./Episode%2012%20Let's%20Build%20Our%20Store/Readme.md)** – We explored state management using Redux, including its setup, slices, actions, and selectors. Let’s dive into the key concepts and learnings! 🚀
 
-🔜 More episodes coming soon... 🚀  
+📌 **[Episode 13 - Time For Test 🧪](./Episode%2013%20Time%20For%20Test/Readme.md)** – In this episode, we focused on writing test cases, understanding different types of testing, and utilizing the React Testing Library. Let’s dive into the key concepts and learnings! 🚀
+
+Finally, we have completed the course and are ready to build our own projects! 🎉
 
 ---
 
