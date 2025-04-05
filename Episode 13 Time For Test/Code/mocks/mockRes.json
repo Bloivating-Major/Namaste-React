@@ -1,0 +1,98 @@
+[
+  {
+      "id": "79019",
+      "name": "Pizza Hut",
+      "image": "https://media-assets.swiggy.com/RX_THUMBNAIL/IMAGES/VENDOR/2024/7/17/9d82e3e8-67c4-4410-93ab-49464bc5c06b_79019.jpg",
+      "locality": "BHEL",
+      "areaName": "Indrapuri",
+      "rating": 4.3,
+      "price": "₹350 for two",
+      "cuisines": "Pizzas",
+      "deliveryTime": 26,
+      "link": "#"
+  },
+  {
+      "id": "697182",
+      "name": "Burger King",
+      "image": "https://media-assets.swiggy.com/RX_THUMBNAIL/IMAGES/VENDOR/2025/3/24/92fb11b5-88c6-403b-addd-c3afe8211f5b_697182.jpg",
+      "locality": "Indrapuri",
+      "areaName": "Bhopal",
+      "rating": 4.3,
+      "price": "₹350 for two",
+      "cuisines": "Burgers, American",
+      "deliveryTime": 23,
+      "link": "#"
+  },
+  {
+      "id": "968281",
+      "name": "Olio - The Wood Fired Pizzeria",
+      "image": "https://media-assets.swiggy.com/RX_THUMBNAIL/IMAGES/VENDOR/2025/1/26/738ffbce-6e44-4c8d-a590-c56b3c66d0de_968281.jpg",
+      "locality": "Raisen Road",
+      "areaName": "Govindpura",
+      "rating": 4.4,
+      "price": "₹300 for two",
+      "cuisines": "Pizzas, Pastas, Italian, Fast Food, Snacks, Beverages, Desserts",
+      "deliveryTime": 41,
+      "link": "#"
+  },
+  {
+      "id": "973788",
+      "name": "Cheesecakes By CakeZone",
+      "image": "https://media-assets.swiggy.com/RX_THUMBNAIL/IMAGES/VENDOR/2024/11/13/2f4aa33f-4fd5-49a2-bedd-ff5308059d83_973788.JPG",
+      "locality": "Raisen Road",
+      "areaName": "Govindpura",
+      "rating": 3.8,
+      "price": "₹200 for two",
+      "cuisines": "Bakery, Desserts, Beverages, Ice Cream, Sweets, Juices, Bengali",
+      "deliveryTime": 45,
+      "link": "#"
+  },
+  {
+      "id": "585068",
+      "name": "Shri Anjani Veg Bhojnalaya",
+      "image": "https://media-assets.swiggy.com/db050d896c76f203d42b50936b48d339",
+      "locality": "Ganesh Galaxy",
+      "areaName": "Ayodhya Bypass",
+      "rating": 4.2,
+      "price": "₹250 for two",
+      "cuisines": "Thalis, Indian, Fast Food, Chinese",
+      "deliveryTime": 25,
+      "link": "#"
+  },
+  {
+      "id": "117679",
+      "name": "Rajoriya Dk Restaurant",
+      "image": "https://media-assets.swiggy.com/wa3rhvxhpqghamehdtrg",
+      "locality": "BHEL",
+      "areaName": "BHEL",
+      "rating": 4.1,
+      "price": "₹200 for two",
+      "cuisines": "Thali, North Indian, Snacks, Indian, Fast Food, Sweets",
+      "deliveryTime": 19,
+      "link": "#"
+  },
+  {
+      "id": "540284",
+      "name": "Rajoriya restaurant",
+      "image": "https://media-assets.swiggy.com/RX_THUMBNAIL/IMAGES/VENDOR/2025/1/16/fbbf11a7-23a0-4d66-98d0-cd2ad98fe894_540284 (1).jpg",
+      "locality": "BHEL",
+      "areaName": "BHEL",
+      "rating": 4.1,
+      "price": "₹199 for two",
+      "cuisines": "Thali, North Indian, Indian, Chinese, Snacks, Fast Food, indian snacks, Sweets",
+      "deliveryTime": 30,
+      "link": "#"
+  },
+  {
+      "id": "581783",
+      "name": "Grameen Kulfi",
+      "image": "https://media-assets.swiggy.com/mqbeykinxyadtcqhimzo",
+      "locality": "Narela Sankari",
+      "areaName": "Kiran Nagar Phase 2",
+      "rating": 4.7,
+      "price": "₹120 for two",
+      "cuisines": "Ice Cream, Desserts",
+      "deliveryTime": 12,
+      "link": "#"
+  }
+]
