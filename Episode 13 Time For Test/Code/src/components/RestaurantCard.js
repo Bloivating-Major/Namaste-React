@@ -1,41 +1,40 @@
 import React from "react";
 
-const RestaurantCard = (props) => {
-  const resData = props.resData;
+const RestaurantCard = ({ resData }) => {
   const { name, image, rating, price, cuisines } = resData;
 
   return (
-    <div data-testid="resCard" className="restaurant-card h-fit">
-      <img className="cardImage " src={image} alt="LogoImage" />
-      <h2 className="font-bold text-xl mt-2">{name}</h2>
-      <h3 className="font-medium text-red-500">Rating: {rating}</h3>
-      <p className="capitalize font-medium">{cuisines}</p>
-      <h4 className="font-medium">Prices : {price} </h4>
+    <div
+      data-testid="resCard"
+      className="restaurant-card bg-white  shadow-md hover:shadow-xl transition-shadow duration-300 rounded-xl overflow-hidden h-full"
+    >
+      <img
+        className="w-full h-40 object-cover"
+        src={image}
+        alt={name}
+        loading="lazy"
+      />
+      <div className="p-4">
+        <h2 className="font-bold text-lg truncate">{name}</h2>
+        <h3 className="text-red-500 text-sm">Rating: {rating}</h3>
+        <p className="capitalize text-sm text-gray-800 ">
+          {cuisines}
+        </p>
+        <h4 className="font-medium mt-1 text-sm">Price: {price}</h4>
+      </div>
     </div>
   );
 };
 
-// Higher Order Component
-// take input as RestaurantCard ==> RestaurantCardPromoted
-
-// Exporting our HOC
-export const withPromotedLabel = (RestaurantCard) => {
-  return (props) => {
-    return (
-      <div className="restaurant-card h-fit relative z-10">
-        <div className="font-medium text-white bg-black absolute left-3 top-2 px-2 z-50 rounded-md ">
-          Promoted
-        </div>
-        <img className="cardImage " src={props.resData.image} alt="LogoImage" />
-        <h2 className="font-bold text-xl mt-2">{props.resData.name}</h2>
-        <h3 className="font-medium text-red-500">
-          Rating: {props.resData.rating}
-        </h3>
-        <p className="capitalize font-medium">{props.resData.cuisines}</p>
-        <h4 className="font-medium">Prices : {props.resData.price} </h4>
+export const withPromotedLabel = (WrappedCard) => {
+  return (props) => (
+    <div className="relative">
+      <div className="absolute top-2 left-2 bg-yellow-500 text-xs text-white px-2 py-1 rounded-md z-20 shadow-md">
+        PROMOTED
       </div>
-    );
-  };
+      <WrappedCard {...props} />
+    </div>
+  );
 };
 
 export default RestaurantCard;

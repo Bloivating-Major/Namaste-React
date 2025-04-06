@@ -17,11 +17,12 @@ export function useRestaurants() {
         if (!response.ok) throw new Error("Failed to fetch data");
 
         const data = await response.json();
-        console.log(data);
 
-        const cards =
-          data?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
-            ?.restaurants || [];
+        const cards = data?.data?.cards?.find(
+          (card) =>
+            card?.card?.card?.gridElements?.infoWithStyle?.restaurants
+        )?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
+        
 
         const transformedData = cards
           .map((item, index) => {
@@ -47,7 +48,6 @@ export function useRestaurants() {
           })
           .filter(Boolean); // remove nulls
 
-          console.log(transformedData);
 
         setRestaurants(transformedData);
         setFilteredRestaurants(transformedData);
