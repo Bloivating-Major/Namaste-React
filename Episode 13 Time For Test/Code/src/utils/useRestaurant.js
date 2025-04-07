@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
+import { SWIGGY_API_URL } from "./constants";
 
-const SWIGGY_API_URL =
-  "https://www.swiggy.com/dapi/restaurants/list/v5?lat=23.2706759&lng=77.4630265&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
 
 export function useRestaurants() {
   const [restaurants, setRestaurants] = useState([]);
