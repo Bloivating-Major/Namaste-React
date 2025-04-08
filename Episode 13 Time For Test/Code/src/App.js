@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 
 import Header from "./components/Header";
@@ -6,73 +6,46 @@ import Body from "./components/Body";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from './components/Error';
-import RestaurantMenu from "./components/RestaurantMenu"
+import RestaurantMenu from "./components/RestaurantMenu";
 import Cart from "./components/Cart";
-
+import Grocery from "./components/Grocery"; // 🚫 Lazy loading removed
 
 // Creating a Route
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import UserContext from "./utils/UserContext";
 
-// Wrapping my full application with Provider.
+// Redux Provider
 import { Provider } from "react-redux";
-// Pass Store as a Prop to provider
 import appStore from "./store/appStore";
 
-
-// * Modularity is also known as:
-// * Chunking
-// * Code Splitting
-// * Dynamic Bundling
-// * Lazy Loading
-// * On-Demand Loading
-// * Dynamic Import
-
-// Lazy Loading can be achieved using React.lazy() and import()
-
-const Grocery = lazy(()=> import('./components/Grocery'));
-
 const AppLayout = () => {
-
-  // State variables to update the context 
   const [userName, setUserName] = useState();
 
-  // Some Authentication Logic
-  useEffect(()=>{
-    // Make API call and send username and password
-    const data = {
-      name : "Sambhav"
-    };
+  useEffect(() => {
+    const data = { name: "Sambhav" };
     setUserName(data.name);
-  }, [])
+  }, []);
 
   return (
-    // Pass Store as a Prop to your Provider
     <Provider store={appStore}>
-    <UserContext.Provider value={{loggedInUser : userName, setUserName}}>
-    <div className="app">
-      <Header />
-      <Outlet />
-      {/* If Path is / then i should have Body */}
-      {/* <Body /> */}
-      {/* If Path is /about i should have About */}
-      {/* <About /> */}
-      {/* If Path is /contact i should have Contact */}
-      {/* <Contact /> */}
-    </div>
-    </UserContext.Provider>
+      <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+        <div className="app">
+          <Header />
+          <Outlet />
+        </div>
+      </UserContext.Provider>
     </Provider>
   );
 };
 
-// Creating a Router Configuration
+// Router Configuration
 const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <AppLayout />,
-    children : [
+    children: [
       {
-        path : '/',
+        path: "/",
         element: <Body />,
       },
       {
@@ -80,32 +53,25 @@ const appRouter = createBrowserRouter([
         element: <About />,
       },
       {
-        path : '/contact',
-        element: <Contact />
+        path: "/contact",
+        element: <Contact />,
       },
       {
-        path : '/restaurants/:resId',
-        element : <RestaurantMenu />
+        path: "/restaurants/:resId",
+        element: <RestaurantMenu />,
       },
       {
-        path : '/grocery',
-        element : (
-          <Suspense fallback={<h1>Loading...</h1>}>
-            <Grocery />
-            {/* <Grocery /> will be rendered only when it becomes necessary */}
-          </Suspense>
-        )
+        path: "/grocery",
+        element: <Grocery />, // 👈 No suspense/lazy now
       },
       {
-        path : '/cart',
-        element : <Cart />,
+        path: "/cart",
+        element: <Cart />,
       }
     ],
-    errorElement : <Error />
+    errorElement: <Error />
   },
- 
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
 root.render(<RouterProvider router={appRouter} />);
