@@ -7,9 +7,8 @@ import { useRestaurants } from "../utils/useRestaurant";
 import UserContext from "../utils/UserContext";
 
 const Body = () => {
-
+  const isOnline = useOnlineStatus();
   const { loggedInUser, setUserName } = useContext(UserContext);
-
   const {
     restaurants,
     filteredRestaurants,
@@ -21,13 +20,18 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
   const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
 
-  // Add this console log to debug
-  console.log("Loading state:", loading);
-  console.log("Restaurants count:", restaurants?.length);
+  // Check online status first
+  if (!isOnline) {
+    return (
+      <div className="text-center mt-10">
+        <h1 className="text-2xl font-bold">No Internet Connection</h1>
+        <p className="text-gray-600">Please check your internet connection and try again.</p>
+      </div>
+    );
+  }
 
-  // Check loading state first
+  // Then check loading state
   if (loading) {
-    console.log("Rendering Shimmer");
     return <Shimmer />;
   }
 
@@ -51,17 +55,6 @@ const Body = () => {
     setFilteredRestaurants(filteredList);
     setSearchText("");
   };
-
-  const isOnline = useOnlineStatus();
-
-  if (!isOnline) {
-    return (
-      <div className="text-center mt-10">
-        <h1 className="text-2xl font-bold">No Internet Connection</h1>
-        <p className="text-gray-600">Please check your internet connection and try again.</p>
-      </div>
-    );
-  }
 
   return (
     <div className="body px-4 md:px-8">
@@ -125,5 +118,6 @@ const Body = () => {
 };
 
 export default Body;
+
 
 
