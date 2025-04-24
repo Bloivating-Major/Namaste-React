@@ -18,11 +18,26 @@ const Body = () => {
     error,
   } = useRestaurants();
 
-  console.log("loading:", loading)
-  console.log("restaurants:", restaurants)
-
   const [searchText, setSearchText] = useState("");
   const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
+
+  // Add this console log to debug
+  console.log("Loading state:", loading);
+  console.log("Restaurants count:", restaurants?.length);
+
+  // Check loading state first
+  if (loading) {
+    console.log("Rendering Shimmer");
+    return <Shimmer />;
+  }
+
+  if (error) {
+    return <p className="text-center text-red-500">Error: {error}</p>;
+  }
+
+  if (!restaurants || restaurants.length === 0) {
+    return <p className="text-center">No restaurants found</p>;
+  }
 
   const filterTopRatedRestaurants = () => {
     const filteredList = restaurants.filter((res) => res.rating > 4.3);
@@ -47,9 +62,6 @@ const Body = () => {
       </div>
     );
   }
-
-  if (loading) return <Shimmer />;
-  if (error) return <p className="text-center text-red-500">Error: {error}</p>;
 
   return (
     <div className="body px-4 md:px-8">
@@ -94,23 +106,24 @@ const Body = () => {
       </div>
 
       {/* Restaurant List */}
-{/* Restaurant List */}
-<div className="restaurant-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-fr">
-  {filteredRestaurants.map((item) => (
-    <Link key={item.id} to={`/restaurants/${item.id}`}>
-      <div className="transition-transform duration-200 hover:scale-105 h-full">
-        {item.rating > 4.5 ? (
-          <RestaurantCardPromoted resData={item} />
-        ) : (
-          <RestaurantCard resData={item} />
-        )}
+      <div className="restaurant-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-fr">
+        {filteredRestaurants.map((item) => (
+          <Link key={item.id} to={`/restaurants/${item.id}`}>
+            <div className="transition-transform duration-200 hover:scale-105 h-full">
+              {item.rating > 4.5 ? (
+                <RestaurantCardPromoted resData={item} />
+              ) : (
+                <RestaurantCard resData={item} />
+              )}
+            </div>
+          </Link>
+        ))}
       </div>
-    </Link>
-  ))}
-</div>
 
     </div>
   );
 };
 
 export default Body;
+
+
