@@ -29,10 +29,18 @@ const Header = () => {
       {/* Right: Desktop Nav */}
       <ul className="hidden md:flex gap-6 items-center text-gray-800 text-sm font-medium">
         <li>Online: {onlineStatus ? "✅" : "⛔"}</li>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About Us</Link></li>
-        <li><Link to="/contact">Contact Us</Link></li>
-        <li><Link to="/grocery">Grocery</Link></li>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/about">About Us</Link>
+        </li>
+        <li>
+          <Link to="/contact">Contact Us</Link>
+        </li>
+        <li>
+          <Link to="/grocery">Grocery</Link>
+        </li>
         <li>
           <Link to="/cart">
             🛒 {cartItems.length === 1 ? "1 item" : `${cartItems.length} items`}
@@ -54,6 +62,14 @@ const Header = () => {
         </button>
       </div>
 
+      {/* Backdrop when mobile menu is open */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black/20 backdrop-blur-sm z-30"
+          onClick={() => setIsOpen(false)}
+        ></div>
+      )}
+      
       {/* Slide-in Mobile Menu */}
       <div
         className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg p-6 transform ${
@@ -62,13 +78,30 @@ const Header = () => {
       >
         <ul className="flex flex-col gap-4 text-sm font-medium text-gray-800">
           <li>Online: {onlineStatus ? "✅" : "⛔"}</li>
-          <li><Link to="/" onClick={() => setIsOpen(false)}>Home</Link></li>
-          <li><Link to="/about" onClick={() => setIsOpen(false)}>About Us</Link></li>
-          <li><Link to="/contact" onClick={() => setIsOpen(false)}>Contact Us</Link></li>
-          <li><Link to="/grocery" onClick={() => setIsOpen(false)}>Grocery</Link></li>
+          <li>
+            <Link to="/" onClick={() => setIsOpen(false)}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" onClick={() => setIsOpen(false)}>
+              About Us
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" onClick={() => setIsOpen(false)}>
+              Contact Us
+            </Link>
+          </li>
+          <li>
+            <Link to="/grocery" onClick={() => setIsOpen(false)}>
+              Grocery
+            </Link>
+          </li>
           <li>
             <Link to="/cart" onClick={() => setIsOpen(false)}>
-              🛒 {cartItems.length === 1 ? "1 item" : `${cartItems.length} items`}
+              🛒{" "}
+              {cartItems.length === 1 ? "1 item" : `${cartItems.length} items`}
             </Link>
           </li>
           <button
